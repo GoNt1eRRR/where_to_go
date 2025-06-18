@@ -5,8 +5,13 @@ from tinymce.models import HTMLField
 class Image(models.Model):
     place = models.ForeignKey('Place', on_delete=models.CASCADE, related_name='images', verbose_name='место')
     image = models.ImageField(verbose_name='фотография')
-    ordinal_number = models.PositiveIntegerField(default=0, blank=False, null=False, db_index=True,
-                                                 verbose_name='порядковый номер')
+    ordinal_number = models.PositiveIntegerField(
+        default=0,
+        blank=False,
+        null=False,
+        db_index=True,
+        verbose_name='порядковый номер',
+    )
 
     class Meta:
         ordering = ['ordinal_number']
