@@ -68,12 +68,22 @@ SECRET_KEY=<ваш_секретный_ключ>
 Ниже представлены переменные окружения, которые имеют значения по умолчанию. При необходимости можно устанавливать на свои.
 ```python
 DEBUG = True
-ALLOWED_HOSTS = *
-STATIC_URL = /static/'
-STATIC_ROOT = static/
-MEDIA_URL = /media/
-MEDIA_ROOT = media/
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+STATIC_URL = '/static/'
+STATIC_ROOT = 'static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media/'
 ```
+Ниже приведены ссылки на официальную документацию Django по переменным окружения:
+
+- [SECRET_KEY](https://docs.djangoproject.com/en/5.2/ref/settings/#secret-key)
+- [DEBUG](https://docs.djangoproject.com/en/5.2/ref/settings/#debug)
+- [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.2/ref/settings/#allowed-hosts)
+- [STATIC_URL](https://docs.djangoproject.com/en/5.2/ref/settings/#static-url)
+- [STATIC_ROOT](https://docs.djangoproject.com/en/5.2/ref/settings/#static-root)
+- [MEDIA_URL](https://docs.djangoproject.com/en/5.2/ref/settings/#media-url)
+- [MEDIA_ROOT](https://docs.djangoproject.com/en/5.2/ref/settings/#media-root)
+
 5. Примените миграции:
 ```python
 python manage.py migrate

@@ -84,8 +84,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_URL = env.str('STATIC_URL', default='/static/')
+STATIC_ROOT = env.path('STATIC_ROOT', default="static/")
 
 MEDIA_URL = env.str('MEDIA_URL', default="/media/")
 MEDIA_ROOT = BASE_DIR / env.path('MEDIA_ROOT', default="media/")
