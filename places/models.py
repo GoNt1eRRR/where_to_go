@@ -23,7 +23,7 @@ class Image(models.Model):
 
 
 class Place(models.Model):
-    title = models.CharField(max_length=150, verbose_name='название')
+    title = models.CharField(max_length=150, unique=True, verbose_name='название')
     short_description = models.TextField(blank=True, verbose_name='краткое описание')
     long_description = HTMLField(blank=True, verbose_name='полное описание')
     lng = models.FloatField(verbose_name='долгота')
