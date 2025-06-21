@@ -11,7 +11,7 @@ IMAGE_MAX_HEIGHT = 200
 class ImageInline(SortableStackedInline):
     model = Image
     readonly_fields = ['place_image', ]
-    extra = 10
+    extra = 3
 
     def place_image(self, obj):
         return format_html(
