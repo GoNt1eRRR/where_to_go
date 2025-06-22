@@ -86,7 +86,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = env.str('STATIC_URL', default='/static/')
-STATIC_ROOT = env.path('STATIC_ROOT', default="static/")
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
